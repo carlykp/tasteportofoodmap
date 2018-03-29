@@ -1,0 +1,53 @@
+// Specific CSS for your home-page
+body {
+  margin: 0px;
+  font-family: 'Poppins', sans-serif;
+}
+.banner {
+  height: 100vh;
+  width: 100vw;
+  background-size: cover; /* or contain depending on what you want */
+  display: flex;
+  position: relative;
+}
+
+.box {
+  width:40vw;
+  height:100vh;
+  background: rgba(250, 247, 247, 0.72);
+  vertical-align: top;
+  position: absolute;
+  right: 0;
+}
+
+.welcome {
+  text-align: center;
+  margin-top: 260px;
+}
+
+.login {
+  margin-top: 80px;
+  text-align: center;
+  h5 {
+    text-decoration: underline;
+  }
+}
+
+.button1 {
+    background-color: blue;
+    color: white;
+    border-radius: 2px;
+    padding: 5px;
+    width: 200px;
+    text-align: center;
+    font-size: 24px;
+    vertical-align:center;
+    margin-left: 150px;
+    margin-top: 30px;
+}
+
+.note {
+  margin-top: 80px;
+  padding-left: 75px;
+  padding-right: 50px;
+}
