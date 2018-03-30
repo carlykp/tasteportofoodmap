@@ -5,7 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+p "Destroying"
+User.destroy_all
+Restaurant.destroy_all
 
+p "Create users"
 users = User.create([{ booking_ref: '4D5EH9'}, {booking_ref: "J8W6D1"}, {booking_ref: "L93PO7"}])
 
 
