@@ -1,3 +1,3 @@
 class Cuisine < ApplicationRecord
-   validates :name, presence: true, inclusion: {in: ["Baixa", "Foz", "Matosinhos", "Miragaia", "Vila Nova de Gaia", "Cedofeita", "Ribeira", "Boavista", "Campanhã", "Antas", "Paranhos", "Vitoria", "Aldoar", "Afurada". "Bonfim"]}
+   validates :name, presence: true, inclusion: {in: ["Portuguese", "International", "Breakfast", "Drinks", "Cafe", "Italian", "French", "Vegetarian", "Wine Bar", "Argentinian", "Fusion", "Seafood", "Sushi"]}
 end

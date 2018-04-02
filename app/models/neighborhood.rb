@@ -1,5 +1,5 @@
 class Neighborhood < ApplicationRecord
-  validates :name, presence: true, inclusion: {in: ["Baixa", "Foz", "Matosinhos", "Miragaia", "Vila Nova de Gaia", "Cedofeita", "Ribeira", "Boavista", "Campanhã", "Antas", "Paranhos", "Vitoria", "Aldoar", "Afurada". "Bonfim"]}
-  has_many :restaurants
+  attr_accessor :name
+  validates :name, presence: true, inclusion: {in: %w(Baixa Foz Matosinhos Miragaia Cedofeita Ribeira Boavista Campanha Antas Paranhos Vitoria Aldoar Afurada Bonfim)}
 
 end

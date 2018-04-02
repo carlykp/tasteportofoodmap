@@ -10,7 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180330162939) do
+ActiveRecord::Schema.define(version: 20180402111828) do
+
+  create_table "cuisine_restaurants", force: :cascade do |t|
+    t.integer "cuisine_id"
+    t.integer "restaurant_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["cuisine_id"], name: "index_cuisine_restaurants_on_cuisine_id"
+    t.index ["restaurant_id"], name: "index_cuisine_restaurants_on_restaurant_id"
+  end
+
+  create_table "cuisines", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "neighborhoods", force: :cascade do |t|
     t.string "name"
@@ -28,6 +43,8 @@ ActiveRecord::Schema.define(version: 20180330162939) do
     t.datetime "updated_at", null: false
     t.float "latitude"
     t.float "longitude"
+    t.string "price"
+    t.string "neighborhood"
   end
 
   create_table "users", force: :cascade do |t|
