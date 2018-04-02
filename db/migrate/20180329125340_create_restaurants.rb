@@ -2,10 +2,10 @@ class CreateRestaurants < ActiveRecord::Migration[5.1]
   def change
     create_table :restaurants do |t|
       t.string :name
-      t.text :address
-      t.text :food_rec
-      t.text :wine_rec
-      t.text :description
+      t.string :address
+      t.string :food_rec
+      t.string :wine_rec
+      t.string :description
 
       t.timestamps
     end

@@ -35,10 +35,10 @@ ActiveRecord::Schema.define(version: 20180402111828) do
 
   create_table "restaurants", force: :cascade do |t|
     t.string "name"
-    t.text "address"
-    t.text "food_rec"
-    t.text "wine_rec"
-    t.text "description"
+    t.string "address"
+    t.string "food_rec"
+    t.string "wine_rec"
+    t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.float "latitude"
