@@ -40,7 +40,7 @@ gem 'simple_form'
 gem 'webpacker', '~> 3.4'
 gem "geocoder"
 gem 'figaro'
-
+gem 'pg_search'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
