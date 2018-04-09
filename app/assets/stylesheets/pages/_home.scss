@@ -28,22 +28,30 @@ body {
 .login {
   margin-top: 80px;
   text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
   h5 {
     text-decoration: underline;
   }
 }
 
-.button1 {
-    background-color: blue;
+.btn-enter {
+  color: white;
+  background-color: $blue;
+  padding: 6px 15px 6px 15px;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  width: 33%;
+  a {
+    color: $light-gray;
+    font-size: 20px;
+  }
+  a:hover {
     color: white;
-    border-radius: 2px;
-    padding: 5px;
-    width: 200px;
-    text-align: center;
-    font-size: 24px;
-    vertical-align:center;
-    margin-left: 150px;
-    margin-top: 30px;
+    text-decoration: none;
+  }
 }
 
 .note {
