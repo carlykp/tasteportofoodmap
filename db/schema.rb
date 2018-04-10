@@ -12,14 +12,17 @@
 
 ActiveRecord::Schema.define(version: 20180409164635) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "bookings", force: :cascade do |t|
-    t.integer "restaurant_id"
+    t.bigint "restaurant_id"
     t.date "date"
     t.time "time_1"
     t.time "time_2"
     t.integer "guests"
     t.string "email"
-    t.integer "user_id"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["restaurant_id"], name: "index_bookings_on_restaurant_id"
@@ -27,8 +30,8 @@ ActiveRecord::Schema.define(version: 20180409164635) do
   end
 
   create_table "cuisine_restaurants", force: :cascade do |t|
-    t.integer "cuisine_id"
-    t.integer "restaurant_id"
+    t.bigint "cuisine_id"
+    t.bigint "restaurant_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["cuisine_id"], name: "index_cuisine_restaurants_on_cuisine_id"
@@ -67,4 +70,8 @@ ActiveRecord::Schema.define(version: 20180409164635) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "bookings", "restaurants"
+  add_foreign_key "bookings", "users"
+  add_foreign_key "cuisine_restaurants", "cuisines"
+  add_foreign_key "cuisine_restaurants", "restaurants"
 end

@@ -17,7 +17,7 @@ class Restaurant < ApplicationRecord
 
   include PgSearch
   pg_search_scope :search,
-    against: [ :neighborhood, :price ],
+    against: [ :neighborhood ],
     using: {
       tsearch: { prefix: true }
     }

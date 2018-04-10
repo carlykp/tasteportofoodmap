@@ -8,6 +8,6 @@ Rails.application.routes.draw do
   # get 'restaurants/:id/booking', to: 'restaurants#booking', as: :booking
 
   resources :restaurants, only: [:index, :show] do
-    resources :bookings, only: [:create]
+    resources :bookings, only: [:new, :create]
   end
 end
