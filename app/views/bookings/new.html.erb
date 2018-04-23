@@ -1,0 +1,20 @@
+<%= render "layouts/banner" %>
+
+<div class="container">
+  <div class="col-sm-8 col-sm-offset-2">
+
+
+    <%= simple_form_for [@restaurant, @booking] do |f| %>
+      <%= f.input :guests %>
+      <%= f.input :date, hint: 'DD/MM/YY' %>
+      <%= f.input :time_1, as: :time, hint: '24:00', placeholder: 'First time preference' %>
+      <%= f.input :time_2, as: :time, hint: '24:00', placeholder: 'Second time preference' %>
+      <%= f.input :email, placeholder: 'user@domain.com' %>
+      <%= f.button :submit %>
+    <% end %>
+
+
+
+
+  </div>
+</div>
