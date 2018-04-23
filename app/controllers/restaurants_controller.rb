@@ -28,6 +28,9 @@
           restaurant.wine_rec +
           '</div>'+
           '<div id="link">'+
+          '<a href="' +
+          restaurant_path(restaurant.id) +
+          '">Read more & Have us book for you!</a>' +
           '</div>'+
           '</div>',
           maxWidth: 300,
