@@ -40,11 +40,14 @@
     end
 
     def show
-      @markers =
+
+      @markers = [
       {
         lat: @restaurant.latitude,
         lng: @restaurant.longitude
-      }
+        # infoWindow: { content: render_to_string(partial: "/flats/map_box", locals: { flat: flat }) }
+      }]
+
     end
 
     def booking
