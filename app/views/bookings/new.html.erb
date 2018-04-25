@@ -1,17 +1,26 @@
 <%= render "layouts/banner" %>
 
 <div class="container">
-  <div class="col-sm-8 col-sm-offset-2">
-
+  <div class="booking-header">
     <h2>Booking information for <%= @restaurant.name %></h2>
+  </div>
+  <div class="booking-notification">
+    <p>Please complete all of the information requested below.</p>
+    <p>Thank you.</p>
+  </div>
+  <div class="col-sx-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3" class="booking-form">
     <%= simple_form_for [@restaurant, @booking] do |f| %>
       <%= f.input :guests %>
+      <br>
       <%= f.input :date %>
+      <br>
       <%= f.input :time_1, hint: 'First time preference' %>
+      <br>
       <%= f.input :time_2, hint: 'Second time preference' %>
+      <br>
       <%= f.input :email, placeholder: 'user@domain.com' %>
-      <%= f.button :submit %>
+      <br>
+      <%= f.button :submit, "Submit Your Booking Request",style: "background:#2574BC; color:white; border: #2574BC" %>
     <% end %>
-
   </div>
 </div>
