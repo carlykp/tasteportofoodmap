@@ -12,11 +12,11 @@ body {
 }
 
 .box {
-  width:40vw;
+  // width:40vw;
   height:100vh;
   background: rgba(250, 247, 247, 0.72);
   vertical-align: top;
-  position: absolute;
+  position: absolute !important;
   right: 0;
 }
 

@@ -1,14 +1,18 @@
 class BookingsController < ApplicationController
   before_action :user
-  before_action :set_restaurant, only: [:new, :create, :index]
+  before_action :set_restaurant, only: [:new, :create]
 
   def new
     @booking = Booking.new
   end
 
   def create
-    @booking = Booking.new(restaurant: @restaurant, user: @user)
+    @booking = Booking.new(booking_params)
+    @booking.user = @user
+    @booking.restaurant = @restaurant
     if @booking.save
+      BookingMailer.confirmation(@booking).deliver_now
+      BookingMailer.notification(@booking).deliver_now
       redirect_to restaurants_path
     else
       redirect_to new_restaurant_booking_path(@restaurant.id)
@@ -20,6 +24,7 @@ class BookingsController < ApplicationController
 
   def user
     @user = current_user
+    # @user = User.find(params[:user_id])
   end
 
   def set_restaurant

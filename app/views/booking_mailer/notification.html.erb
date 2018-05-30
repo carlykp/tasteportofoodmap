@@ -1,0 +1,26 @@
+<h1>Booking Notification</h1>
+
+<p>
+  A booking request was just made.
+</p>
+<p>
+  Booking location: <%= @booking.restaurant.name%>
+</p>
+<p>
+  Booking name: <%= @booking.date %>
+</p>
+<p>
+  Booking time1: <%= @booking.time_1 %>
+</p>
+<p>
+  Booking time2: <%= @booking.time_2 %>
+</p>
+<p>
+  Booking # of guests: <%= @booking.guests %>
+</p>
+<p>
+  Booking email provided: <%= @booking.email %>
+</p>
+<p>
+  Additional email: <%= @booking.user.email %>
+</p>
