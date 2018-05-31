@@ -13,11 +13,32 @@
   text-align: center;
   text-decoration: none;
   a {
-    color: $light-gray;
+    color: white;
     font-size: 20px;
   }
   a:hover {
     color: white;
     text-decoration: none;
   }
+}
+
+.btn-back {
+  color: $light-gray;
+  background-color: $blue;
+  padding: 6px 10px 6px 10px;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  a {
+    color: $light-gray;
+    font-size: 15px;
+  }
+  a:hover {
+    color: white;
+    text-decoration: none !important;
+  }
+}
+
+.back {
+  margin: 10px 0px 30px 0px;
 }

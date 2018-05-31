@@ -1,6 +1,6 @@
 class BookingsController < ApplicationController
   before_action :user
-  before_action :set_restaurant, only: [:new, :create]
+  before_action :set_restaurant, only: [:new, :create, :show]
 
   def new
     @booking = Booking.new
@@ -13,10 +13,14 @@ class BookingsController < ApplicationController
     if @booking.save
       BookingMailer.confirmation(@booking).deliver_now
       BookingMailer.notification(@booking).deliver_now
-      redirect_to restaurants_path
+      redirect_to restaurant_booking_path(@restaurant.id, @booking.id)
     else
       redirect_to new_restaurant_booking_path(@restaurant.id)
     end
+
+  end
+
+  def show
 
   end
 

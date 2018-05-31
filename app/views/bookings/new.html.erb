@@ -1,12 +1,14 @@
 <%= render "layouts/banner" %>
 
 <div class="container">
-  <div class="booking-header">
-    <h2>Booking information for <%= @restaurant.name %></h2>
-  </div>
-  <div class="booking-notification">
-    <p>Please complete all of the information requested below.</p>
-    <p>Thank you.</p>
+  <div class="col-sx-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+    <div class="booking-header">
+      <h2>Booking information for <%= @restaurant.name %></h2>
+    </div>
+    <div class="booking-notification">
+      <p>Please complete all of the information requested below.</p>
+      <p><em>Please Note:</em> if booking for the same day please ensure your request is received at least 2 hours before your prefered time.</p>
+    </div>
   </div>
   <div class="col-sx-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3" class="booking-form">
     <%= simple_form_for [@restaurant, @booking] do |f| %>
