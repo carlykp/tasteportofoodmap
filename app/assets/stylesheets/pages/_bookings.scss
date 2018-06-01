@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+.booking-confirmation-header{
+  margin-bottom: 30px;
+}
+
 .booking-notification {
   text-align: left;
 }
@@ -12,4 +16,23 @@
 
 .btn-booking {
   margin-bottom: 30px !important;
+}
+
+.btn-more {
+  margin-bottom: 30px !important;
+  color: white;
+  background-color: $blue;
+  padding: 6px 15px 6px 15px;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  a {
+    color: white;
+    font-size: 20px;
+  }
+  a:hover {
+    color: white;
+    text-decoration: none;
+  }
+
 }

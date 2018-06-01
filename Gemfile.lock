@@ -216,7 +216,7 @@ PLATFORMS
 
 DEPENDENCIES
   autoprefixer-rails
-  bootstrap-sass (~> 3.3)
+  bootstrap-sass (~> 3.3.7)
   byebug
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
@@ -231,7 +231,7 @@ DEPENDENCIES
   pg_search
   puma (~> 3.7)
   rails (~> 5.1.5)
-  sass-rails (~> 5.0)
+  sass-rails (~> 5.0.7)
   selenium-webdriver
   simple_form
   spring

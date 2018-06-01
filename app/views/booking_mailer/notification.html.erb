@@ -7,13 +7,13 @@
   Booking location: <%= @booking.restaurant.name%>
 </p>
 <p>
-  Booking name: <%= @booking.date %>
+  Booking date: <%= @booking.date.strftime("%A %e %B %Y") %>
 </p>
 <p>
-  Booking time1: <%= @booking.time_1 %>
+  1st Booking time: <%= /\s\d\d:\d\d/.match(@booking.time_1.to_s) %>
 </p>
 <p>
-  Booking time2: <%= @booking.time_2 %>
+  2nd Booking time: <%= /\s\d\d:\d\d/.match(@booking.time_2.to_s) %>
 </p>
 <p>
   Booking # of guests: <%= @booking.guests %>

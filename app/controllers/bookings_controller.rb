@@ -1,6 +1,9 @@
 class BookingsController < ApplicationController
   before_action :user
   before_action :set_restaurant, only: [:new, :create, :show]
+  before_action :set_booking, only: [:show]
+  before_action :set_time1, only: [:show]
+  before_action :set_time2, only: [:show]
 
   def new
     @booking = Booking.new
@@ -21,7 +24,6 @@ class BookingsController < ApplicationController
   end
 
   def show
-
   end
 
   private
@@ -37,6 +39,18 @@ class BookingsController < ApplicationController
 
   def booking_params
     params.require(:booking).permit(:date, :time_1, :time_2, :guests, :email)
+  end
+
+  def set_booking
+    @booking = Booking.find(params[:id])
+  end
+
+  def set_time1
+    @new_time1 = /\s\d\d:\d\d/.match(@booking.time_1.to_s)
+  end
+
+  def set_time2
+    @new_time2 = /\s\d\d:\d\d/.match(@booking.time_2.to_s)
   end
 
 end

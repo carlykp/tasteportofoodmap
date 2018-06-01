@@ -5,11 +5,11 @@ Booking Notification
 
   Booking location: <%= @booking.restaurant.name%>
 
-  Booking name: <%= @booking.date %>
+  Booking date: <%= @booking.date.strftime("%A %e %B %Y") %>
 
-  Booking time1: <%= @booking.time_1 %>
+  1st Booking time: <%= /\s\d\d:\d\d/.match(@booking.time_1.to_s) %>
 
-  Booking time2: <%= @booking.time_2 %>
+  2nd Booking time: <%= /\s\d\d:\d\d/.match(@booking.time_2.to_s) %>
 
   Booking # of guests: <%= @booking.guests %>
 

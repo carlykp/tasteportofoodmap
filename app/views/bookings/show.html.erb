@@ -1,1 +1,37 @@
-<h1>Booking Received</h1>
+<%= render "layouts/banner" %>
+
+<div class="container">
+  <div class="col-sx-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+    <div class="booking-confirmation-header">
+      <h2>Booking request for <%= @restaurant.name %> received</h2>
+    </div>
+    <div>
+      <p>You will also receive an email confirming that your request has been received. We will be in touch via email with your confirmation.</p>
+    </div>
+    <div class="booking-confirmation-info">
+      <div class="date">
+        <span class="glyphicon glyphicon-calendar"></span><%= "Date"": #{@booking.date.strftime("%A %e %B %Y")}" %>
+      </div>
+      <br>
+      <div class="time1">
+        <span class="glyphicon glyphicon-clock "></span><%= " 1st Time requested: #{@new_time1}" %>
+      </div>
+      <br>
+      <div class="time2">
+        <span class="glyphicon glyphicon-clock "></span><%= " 2nd Time requested: #{@new_time2}" %>
+      </div>
+      <br>
+      <div class="guests">
+        <span class="glyphicon glyphicon-group "></span><%= " Number of guests: #{@booking.guests}" %>
+      </div>
+      <br>
+      <div class="email">
+        <span class="glyphicon glyphicon-message-empty"></span><%= " Contact email: #{@booking.email}" %>
+      </div>
+      <br>
+      <div class="btn-more">
+        <%= link_to "Search for more locations", restaurants_path %>
+      </div>
+    </div>
+  </div>
+</div>
