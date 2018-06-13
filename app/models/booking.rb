@@ -7,5 +7,6 @@ class Booking < ApplicationRecord
   validates :time_2, presence: true
   validates :guests, presence: true
   validates :email, presence: true
+  validates :telephone, length: { minimum: 9 }
 
 end

@@ -1,0 +1,46 @@
+<%= render "layouts/banner" %>
+
+<div class="container">
+  <div class="col-sx-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+    <div class="requests-header">
+      <h2>Here are the booking requests you have made...</h2>
+    </div>
+
+    <% @counter = 1 %>
+
+    <% @bookings.each do |booking| %>
+
+    <p>Booking #<%= @counter %></p>
+      <div class="booking-confirmation-info">
+        <div class="date">
+          <i class="far fa-calendar-alt "></i><%= " Date"": #{booking.date.strftime("%A %e %B %Y")}" %>
+        </div>
+
+        <br>
+        <div class="time1">
+          <% @new_time1 = /\s\d\d:\d\d/.match(booking.time_1.to_s) %>
+          <i class="far fa-clock "></i><%= " 1st Time requested: #{@new_time1}" %>
+        </div>
+        <br>
+        <div class="time2">
+          <% @new_time2 = /\s\d\d:\d\d/.match(booking.time_2.to_s) %>
+          <i class="far fa-clock "></i><%= " 2nd Time requested: #{@new_time2}" %>
+        </div>
+        <br>
+        <div class="guests">
+          <i class="fas fa-users "></i><%= " Number of guests: #{booking.guests}" %>
+        </div>
+        <br>
+        <div class="email">
+          <i class="far fa-envelope-open "></i><%= " Contact email: #{booking.email}" %>
+        </div>
+        <br>
+
+     <br>
+      </div>
+      <% @counter +=1 %>
+    <% end %>
+
+  </div>
+</div>
+

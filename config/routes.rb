@@ -12,4 +12,7 @@ Rails.application.routes.draw do
   resources :restaurants, only: [:index, :show] do
     resources :bookings, only: [:new, :create, :show]
   end
+
+  get "/user/:id/requests", to: 'users#requests', as: 'requests'
+
 end
