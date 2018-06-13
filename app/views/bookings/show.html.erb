@@ -10,23 +10,23 @@
     </div>
     <div class="booking-confirmation-info">
       <div class="date">
-        <span class="glyphicon glyphicon-calendar"></span><%= "Date"": #{@booking.date.strftime("%A %e %B %Y")}" %>
+        <i class="far fa-calendar-alt "></i><%= " Date"": #{@booking.date.strftime("%A %e %B %Y")}" %>
       </div>
       <br>
       <div class="time1">
-        <span class="glyphicon glyphicon-clock "></span><%= " 1st Time requested: #{@new_time1}" %>
+        <i class="far fa-clock "></i><%= " 1st Time requested: #{@new_time1}" %>
       </div>
       <br>
       <div class="time2">
-        <span class="glyphicon glyphicon-clock "></span><%= " 2nd Time requested: #{@new_time2}" %>
+        <i class="far fa-clock "></i><%= " 2nd Time requested: #{@new_time2}" %>
       </div>
       <br>
       <div class="guests">
-        <span class="glyphicon glyphicon-group "></span><%= " Number of guests: #{@booking.guests}" %>
+        <i class="fas fa-users "></i><%= " Number of guests: #{@booking.guests}" %>
       </div>
       <br>
       <div class="email">
-        <span class="glyphicon glyphicon-message-empty"></span><%= " Contact email: #{@booking.email}" %>
+        <i class="far fa-envelope-open "></i><%= " Contact email: #{@booking.email}" %>
       </div>
       <br>
       <div class="btn-more">
