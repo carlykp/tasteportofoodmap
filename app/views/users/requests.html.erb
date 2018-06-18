@@ -4,13 +4,14 @@
   <div class="col-sx-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
     <div class="requests-header">
       <h2>Here are the booking requests you have made...</h2>
+      <br>
     </div>
 
     <% @counter = 1 %>
 
     <% @bookings.each do |booking| %>
 
-    <p>Booking #<%= @counter %></p>
+    <h4>Request #<%= @counter %></h4>
       <div class="booking-confirmation-info">
         <div class="date">
           <i class="far fa-calendar-alt "></i><%= " Date"": #{booking.date.strftime("%A %e %B %Y")}" %>
@@ -40,7 +41,10 @@
       </div>
       <% @counter +=1 %>
     <% end %>
-
+    <br>
+    <div class="btn-more">
+      <%= link_to "Search for delicious locations", restaurants_path %>
+    </div>
   </div>
 </div>
 
