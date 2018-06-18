@@ -19,14 +19,14 @@
           '<em>Description:</em> ' +
           restaurant.description +
           '</div>'+
-          '<div id="food">'+
-          '<em>Food recommendation:</em> ' +
-          restaurant.food_rec +
-          '</div>'+
-          '<div id="wine">'+
-          '<em>Beverage recommendation:</em> ' +
-          restaurant.wine_rec +
-          '</div>'+
+          #'<div id="food">'+
+          #'<em>Food recommendation:</em> ' +
+          #restaurant.food_rec +
+          #'</div>'+
+          #'<div id="wine">'+
+          #'<em>Beverage recommendation:</em> ' +
+          #restaurant.wine_rec +
+          #'</div>'+
           '<div id="link">'+
           '<a href="' +
           restaurant_path(restaurant.id) +
