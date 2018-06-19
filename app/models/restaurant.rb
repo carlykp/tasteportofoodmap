@@ -7,6 +7,13 @@ class Restaurant < ApplicationRecord
   validates :description, presence: true
   validates :price, presence: true
   validates :neighborhood, presence: true, inclusion: {in: %w(Bolhao Baixa Foz Matosinhos Miragaia Cedofeita Ribeira Boavista Campanha Antas Paranhos Vitoria Aldoar Afurada Bonfim)}
+  validates :sunday, presence: true
+  validates :monday, presence: true
+  validates :tuesday, presence: true
+  validates :wednesday, presence: true
+  validates :thursday, presence: true
+  validates :friday, presence: true
+  validates :saturday, presence: true
 
   has_many :cuisine_restaurants, dependent: :destroy
   has_many :cuisine, through: :cuisine_restaurants

@@ -18,7 +18,7 @@ class BookingsController < ApplicationController
       BookingMailer.notification(@booking).deliver_now
       redirect_to restaurant_booking_path(@restaurant.id, @booking.id)
     else
-      redirect_to new_restaurant_booking_path(@restaurant.id)
+      redirect_to new_restaurant_booking_path(@restaurant.id), alert: "Not all of the required fields were correctly inputed, please try again."
     end
 
   end
