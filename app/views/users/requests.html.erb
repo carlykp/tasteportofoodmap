@@ -13,6 +13,11 @@
 
     <h4>Request #<%= @counter %></h4>
       <div class="booking-confirmation-info">
+        <div class="name">
+          <i class="fas fa-utensils "></i><%= " Restaurant"": #{booking.restaurant.name}" %>
+        </div>
+
+        <br>
         <div class="date">
           <i class="far fa-calendar-alt "></i><%= " Date"": #{booking.date.strftime("%A %e %B %Y")}" %>
         </div>
@@ -42,8 +47,8 @@
       <% @counter +=1 %>
     <% end %>
     <br>
-    <div class="btn-more">
-      <%= link_to "Search for delicious locations", restaurants_path %>
+    <div class="btn">
+      <%= link_to "Search for more delicious locations", restaurants_path %>
     </div>
   </div>
 </div>
