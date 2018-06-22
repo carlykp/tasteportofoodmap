@@ -4,6 +4,8 @@
 
     def index
 
+      @search = params[:search]
+
       @restaurants = params[:search].nil? ? Restaurant.all.where.not(latitude: nil, longitude: nil) : Restaurant.search(params[:search]).where.not(latitude: nil, longitude: nil)
 
       @markers = @restaurants.map do |restaurant|
@@ -40,17 +42,12 @@
     end
 
     def show
-
-      if @restaurant = nil
-        redirect_to restaurants_path, alert: "We do not have any restaurants in that category, please try again."
-      else
-        @markers = [
+      @markers = [
         {
           lat: @restaurant.latitude,
           lng: @restaurant.longitude
           # infoWindow: { content: render_to_string(partial: "/flats/map_box", locals: { flat: flat }) }
         }]
-      end
     end
 
     def booking
