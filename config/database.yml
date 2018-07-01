@@ -35,6 +35,7 @@ test:
 #   database: db/production.sqlite3
 production:
   <<: *default
+  host: db
   database: tasteportofoodmap_production
-  username:
-  password:
+  username: <%= ENV.fetch('POSTGRES_USER') %>
+  password: <%= ENV.fetch('POSTGRES_PASSWORD') %>
